@@ -10,7 +10,7 @@
  
  // We Can Set SEO urls or Simple Urls by selecting following options, by selecting YES , make sure that all ReWrites are defined in .httaccess
  
- $seo_urls = 'no';//@SEO; 			//  yes/no
+ $seo_urls = @SEO; 			//  yes/no
  function SEO( $text, $slash=false ) {
 	
 	$text = preg_replace('/ \&\#?[(0-9a-zA-Z){4}]+\;/','',$text);
@@ -37,36 +37,36 @@
 
 		
 		
-	@define('compose_msg_link','/message/compose');	
-	@define('login_success','/login/success');
-	@define('logout_success','/logout/success');
-	@define('signup_success','/signup/success');
-	@define('signup_link','/signup.php');	
-	@define('myaccount_link','/myaccount');
-	@define('videos_link','/videos');
-	@define('view_group_link','/group/view/');
-	@define('user_account_link','/manage/account');
-	@define('search_result','/search/result');
+	@define(compose_msg_link,'/message/compose');	
+	@define(login_success,'/login/success');
+	@define(logout_success,'/logout/success');
+	@define(signup_success,'/signup/success');
+	@define(signup_link,'/signup.php');	
+	@define(myaccount_link,'/myaccount');
+	@define(videos_link,'/videos');
+	@define(view_group_link,'/group/view/');
+	@define(user_account_link,'/manage/account');
+	@define(search_result,'/search/result');
 	//@define(edit_group_link,'/manage/group/edit/');
-    @define('edit_group_link','/edit_group.php?url=');
-    @define('admin_link','/admin_area/');
+    @define(edit_group_link,'/edit_group.php?url=');
+    @define(admin_link,'/admin_area/');
 
 	
 
 	}else{
 	
-	@define('compose_msg_link','/compose.php');		
-	@define('login_success','/login_success.php');
-	@define('logout_success','/logout_success.php');
-	@define('signup_success','/signup_success.php');
-	@define('signup_link','/signup.php');
-	@define('myaccount_link','/myaccount.php');
-	@define('videos_link','/videos.php');
-	@define('view_group_link','/view_group.php?url=');
-	@define('user_account_link','/user_account.php');
-	@define('search_result','/search_result.php');
-	@define('edit_group_link','/edit_group.php?url=');
-    @define('admin_link','/admin_area/');
+	@define(compose_msg_link,'/compose.php');		
+	@define(login_success,'/login_success.php');
+	@define(logout_success,'/logout_success.php');
+	@define(signup_success,'/signup_success.php');
+	@define(signup_link,'/signup.php');
+	@define(myaccount_link,'/myaccount.php');
+	@define(videos_link,'/videos.php');
+	@define(view_group_link,'/view_group.php?url=');
+	@define(user_account_link,'/user_account.php');
+	@define(search_result,'/search_result.php');
+	@define(edit_group_link,'/edit_group.php?url=');
+    @define(admin_link,'/admin_area/');
 
 	}
 ?>
