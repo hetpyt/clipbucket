@@ -96,7 +96,7 @@ pr($this->sessions, true);
 		}
 
 
-
+pr($udetails, true);
 
 		if($udetails)
 		{			
@@ -381,7 +381,7 @@ pr($this->sessions, true);
 		{	
 			//$access_details = $this->get_user_level(userid());
 			$access_details = $this->permission;
-e(print_r($access_details));
+pr("login_check:access_details:"); pr($access_details, true);
 			if(is_numeric($access))
 			{
 				if($access_details['level_id'] == $access)
@@ -1788,8 +1788,8 @@ e(print_r($access_details));
 							  AND ".tbl("user_levels_permissions.user_level_id")." = ".tbl("user_levels.user_level_id"));
 							  
 		
-		pr($level, true);		
-		pr($result, true);
+pr("get_user_level:level:"); pr($level, true);		
+pr("get_user_level:result:"); pr($result, true);
 		/*
 		$results = $db->select(tbl('user_levels'),'*'," user_level_id='".$level['level']."'");
 		if($db->num_rows == 0)
