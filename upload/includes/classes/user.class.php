@@ -1788,8 +1788,9 @@ e(print_r($access_details));
 							  AND ".tbl("user_levels_permissions.user_level_id")." = ".tbl("user_levels.user_level_id"));
 							  
 		
-		/*		
+				
 		pr($result);
+		/*
 		$results = $db->select(tbl('user_levels'),'*'," user_level_id='".$level['level']."'");
 		if($db->num_rows == 0)
 		 //incase user level is not valid, it will consider it as registered user
