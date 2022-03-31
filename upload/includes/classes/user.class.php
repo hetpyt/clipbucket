@@ -79,7 +79,7 @@ class userquery extends CBCategory{
 //		$this->user_sess = $sess->get('user_sess');
     	$this->sess_salt = $sess->get('sess_salt');
 		$this->sessions = $this->get_sessions();
-pr("init:this->sessions:"); pr($this->sessions, true);
+//pr("init:this->sessions:"); pr($this->sessions, true);
 		if($this->sessions['smart_sess'])
 		{
 			$this->userid = $this->sessions['smart_sess']['session_user'];
@@ -96,7 +96,7 @@ pr("init:this->sessions:"); pr($this->sessions, true);
 		}
 
 
-pr("init:udetails:"); pr($udetails, true);
+//pr("init:udetails:"); pr($udetails, true);
 
 		if($udetails)
 		{			
@@ -381,7 +381,7 @@ pr("init:udetails:"); pr($udetails, true);
 		{	
 			//$access_details = $this->get_user_level(userid());
 			$access_details = $this->permission;
-pr("login_check:access_details:"); pr($access_details, true);
+//pr("login_check:access_details:"); pr($access_details, true);
 			if(is_numeric($access))
 			{
 				if($access_details['level_id'] == $access)
@@ -1788,8 +1788,8 @@ pr("login_check:access_details:"); pr($access_details, true);
 							  AND ".tbl("user_levels_permissions.user_level_id")." = ".tbl("user_levels.user_level_id"));
 							  
 		
-pr("get_user_level:level:"); pr($level, true);		
-pr("get_user_level:result:"); pr($result, true);
+//pr("get_user_level:level:"); pr($level, true);		
+//pr("get_user_level:result:"); pr($result, true);
 		/*
 		$results = $db->select(tbl('user_levels'),'*'," user_level_id='".$level['level']."'");
 		if($db->num_rows == 0)
