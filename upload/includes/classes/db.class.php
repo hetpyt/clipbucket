@@ -61,9 +61,9 @@ class Clipbucket_db
     function _select($query) {
         global $__devmsgs;
         if (is_array($__devmsgs)) {
-            $start = microtime();
+            $start = microtime(true);
             $result = $this->mysqli->query($query);
-            $end = microtime();
+            $end = microtime(true);
             $timetook = $end - $start;
             devWitch($query, 'select', $timetook);
         } else {
@@ -119,9 +119,9 @@ class Clipbucket_db
        $query = " SELECT $fields FROM $tbl $query_params $ep ";
     
         if (is_array($__devmsgs)) {
-            $start = microtime();
+            $start = microtime(true);
             $data = $this->_select($query);
-            $end = microtime();
+            $end = microtime(true);
             $timetook = $end - $start;
             devWitch($query, 'select', $timetook);
             return $data;
@@ -145,9 +145,9 @@ class Clipbucket_db
             $condition = " Where $cond ";
         $query = "Select Count($fields) From $tbl $condition";
         if (is_array($__devmsgs)) {
-            $start = microtime();
+            $start = microtime(true);
             $result = $this->_select($query);
-            $end = microtime();
+            $end = microtime(true);
             $timetook = $end - $start;
             devWitch($query, 'count', $timetook);
         } else {
@@ -186,9 +186,9 @@ class Clipbucket_db
         global $__devmsgs;
         try {
             if (is_array($__devmsgs)) {
-                $start = microtime();
+                $start = microtime(true);
                 $data = $this->mysqli->query($query);
-                $end = microtime();
+                $end = microtime(true);
                 $timetook = $end - $start;
                 devWitch($query, 'execute', $timetook);
                 return $data;
@@ -249,9 +249,9 @@ class Clipbucket_db
 
         try {
             if (is_array($__devmsgs)) {
-                $start = microtime();
+                $start = microtime(true);
                 $this->mysqli->query($query);
-                $end = microtime();
+                $end = microtime(true);
                 $timetook = $end - $start;
                 devWitch($query, 'update', $timetook);
             } else {
@@ -332,9 +332,9 @@ class Clipbucket_db
         $this->total_queries_sql[] = $query;
         try {
             if (is_array($__devmsgs)) {
-                $start = microtime();
+                $start = microtime(true);
                 $this->mysqli->query($query);
-                $end = microtime();
+                $end = microtime(true);
                 $timetook = $end - $start;
                 devWitch($query, 'delete', $timetook);
             } else {
