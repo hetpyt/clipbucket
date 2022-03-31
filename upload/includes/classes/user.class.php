@@ -79,7 +79,7 @@ class userquery extends CBCategory{
 //		$this->user_sess = $sess->get('user_sess');
     	$this->sess_salt = $sess->get('sess_salt');
 		$this->sessions = $this->get_sessions();
-pr($this->sessions, true);
+pr("init:this->sessions:"); pr($this->sessions, true);
 		if($this->sessions['smart_sess'])
 		{
 			$this->userid = $this->sessions['smart_sess']['session_user'];
@@ -96,7 +96,7 @@ pr($this->sessions, true);
 		}
 
 
-pr($udetails, true);
+pr("init:udetails:"); pr($udetails, true);
 
 		if($udetails)
 		{			
