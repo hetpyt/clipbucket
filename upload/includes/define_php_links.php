@@ -10,7 +10,7 @@
  
  // We Can Set SEO urls or Simple Urls by selecting following options, by selecting YES , make sure that all ReWrites are defined in .httaccess
  
- $seo_urls = @SEO; 			//  yes/no
+ $seo_urls = 'no';//@SEO; 			//  yes/no
  function SEO( $text, $slash=false ) {
 	
 	$text = preg_replace('/ \&\#?[(0-9a-zA-Z){4}]+\;/','',$text);
