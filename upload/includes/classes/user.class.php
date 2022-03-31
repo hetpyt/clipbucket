@@ -381,7 +381,7 @@ class userquery extends CBCategory{
 		{	
 			//$access_details = $this->get_user_level(userid());
 			$access_details = $this->permission;
-print_r($access_details);
+e(print_r($access_details));
 			if(is_numeric($access))
 			{
 				if($access_details['level_id'] == $access)
