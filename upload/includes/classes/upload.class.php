@@ -69,7 +69,7 @@ class Upload{
 
 		// $_POST['embed_code'] = htmlspecialchars($_POST['embed_code']);
 		$this->validate_video_upload_form($array,TRUE);
-
+logData($eh->error_list,"upload_debug");
 		if(empty($eh->error_list))
 		{
 			$required_fields = $this->loadRequiredFields($array);
@@ -245,6 +245,7 @@ class Upload{
 			if(!userid() && !has_access('allow_video_upload',false,false))
 			{
 				e(lang("you_not_logged_in"));
+logData("not allowed","upload_debug");					
 				//exit();
 			} else {
 								
@@ -252,6 +253,7 @@ class Upload{
 				if(!$insert_id)
 				{
 					//echo "$query";
+logData($query,"upload_debug");					
 					$db->Execute($query);
 					$insert_id = $db->insert_id();
 					
