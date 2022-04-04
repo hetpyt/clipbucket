@@ -33,7 +33,7 @@ foreach($files as $file)
 {
 	$file_details = get_file_details($file['cqueue_name'],true);
 	
-	logData('verify file '.$file,'checkpoints');
+logData('verify file '.print_r($file),'checkpoints');
 	//Thanks to pandusetiawan @ forums.clip-bucket.com
 
 	
@@ -42,7 +42,7 @@ foreach($files as $file)
 		
 		update_processed_video($file,'Failed',$ffmpeg->failed_reason);
 
-
+logData('verify file faliled: '.$ffmpeg->failed_reason,'checkpoints');
 		$db->update(tbl("conversion_queue"),
 		array("cqueue_conversion"),
 		array("yes")," cqueue_id = '".$file['cqueue_id']."'");
@@ -67,6 +67,7 @@ foreach($files as $file)
 
 	
 		update_processed_video($file,'Successful');
+logData('verify file success','checkpoints');
 		if (SOCIAL_APP_INSTALLED == 'INSTALLED'){
 			$cbPosts->special_video_post_update($file_name,"active");
 		}
