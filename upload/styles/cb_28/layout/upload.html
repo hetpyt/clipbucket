@@ -358,6 +358,7 @@
 							}).success(function(msg){
 								var lang = $('#subtitle_lang').val();
 								console.log(msg);
+								msg = $.parseJSON(msg);
 								_cb.uploadSubtitle(theVideoId, lang, "{$honey_ajax}");
 								//msg = $.parseJSON(msg);
 								$("#uploadMessage").removeClass("hidden");
