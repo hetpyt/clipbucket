@@ -26,14 +26,14 @@ if(isset($_GET['filename']))
 
 $files = get_video_being_processed($fileName);
 
-
+logData('verify converted videos','checkpoints');
 
 if(is_array($files))
 foreach($files as $file)
 {
 	$file_details = get_file_details($file['cqueue_name'],true);
 	
-	
+	logData('verify file '.$file,'checkpoints');
 	//Thanks to pandusetiawan @ forums.clip-bucket.com
 
 	
