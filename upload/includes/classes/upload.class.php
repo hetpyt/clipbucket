@@ -69,7 +69,7 @@ class Upload{
 
 		// $_POST['embed_code'] = htmlspecialchars($_POST['embed_code']);
 		$this->validate_video_upload_form($array,TRUE);
-
+file_put_content("clipbucket__error_list", $eh->error_list);
 		if(empty($eh->error_list))
 		{
 			$required_fields = $this->loadRequiredFields($array);
@@ -252,7 +252,7 @@ class Upload{
 				if(!$insert_id)
 				{
 					//echo "$query";
-					file_put_content("query", $query);
+					file_put_content("clipbucket__query", $query);
 					$db->Execute($query);
 					$insert_id = $db->insert_id();
 					
