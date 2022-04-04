@@ -251,7 +251,8 @@ class Upload{
 				$insert_id = file_name_exists($file_name);
 				if(!$insert_id)
 				{
-					#echo "$query";
+					echo "$query";
+					
 					$db->Execute($query);
 					$insert_id = $db->insert_id();
 					
